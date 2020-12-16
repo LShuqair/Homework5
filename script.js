@@ -1,7 +1,7 @@
 console.log("test");
 $("#currentDay").text(new Date());
 
-
+// Declearing varaibles
 var T9Am=$("#T9");
 var T10Am=$("#T10A");
 var T11Am=$("#T11");
@@ -13,7 +13,7 @@ var T4Pm=$("#T16");
 var T5Pm=$("#T17");
 
 
-
+//add onclick button function 
 $("button").on("click", function(){
 localStorage.setItem("9AM", document.querySelector("#T9").value)
 localStorage.setItem("10AM", document.querySelector("#T10").value)
@@ -31,6 +31,7 @@ localStorage.setItem("5PM", document.querySelector("#T17").value)
 
 });
 
+// making function to get items from local storage
 function restoreFromLocalStorage(){
     document.querySelector('#T9').value = localStorage.getItem("9AM")
     document.querySelector('#T10').value = localStorage.getItem("10AM")
